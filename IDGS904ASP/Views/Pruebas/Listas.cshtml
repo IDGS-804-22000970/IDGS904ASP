@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Listas";
+}
+
+<h2>Listas</h2>
+
+@{ 
+    var listado = new List<SelectListItem>() {
+    new SelectListItem()
+    {
+        Text="SI",
+        Value="1"
+    },
+    new SelectListItem()
+    {
+        Text="NO",
+        Value="2"
+    }
+    };
+}
+<br />
+<label>Ecscoja un valor</label>
+@Html.DropDownList("miDropDownList", listado)

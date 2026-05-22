@@ -120,11 +120,13 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\Cinepolis\CinepolisController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PruebasController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Cinepolis\Cinepolis.cs" />
     <Compile Include="Models\Persona.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -145,6 +147,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\cinepolis.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -182,6 +185,11 @@
     <Content Include="Views\Pruebas\Index.cshtml" />
     <Content Include="Views\Pruebas\Contacto.cshtml" />
     <Content Include="Views\Pruebas\Empleado.cshtml" />
+    <Content Include="Views\Cinepolis\Cinepolis.cshtml" />
+    <Content Include="Views\Pruebas\Display Templates\Boolean.cshtml" />
+    <Content Include="Views\Pruebas\Display Templates\DateTime.cshtml" />
+    <Content Include="Views\Pruebas\Display Templates\Persona.cshtml" />
+    <Content Include="Views\Pruebas\Listas.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

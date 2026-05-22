@@ -1,0 +1,145 @@
+﻿@model introCsharp.Models.Cinepolis
+
+@{
+    ViewBag.Title = "Cinepolis";
+}
+
+<style>
+
+    body {
+        background-image: url('/Content/cinepolis.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    .contenedor {
+        width: 900px;
+        margin: auto;
+        margin-top: 30px;
+        padding: 20px;
+        color: white;
+    }
+
+    .caja {
+        border: 2px solid white;
+        padding: 20px;
+        min-height: 300px;
+        background-color: rgba(0,0,0,0.4);
+    }
+
+    .acciones {
+        border: 2px solid white;
+        width: 300px;
+        margin: auto;
+        margin-top: 30px;
+        padding: 20px;
+        text-align: center;
+        background-color: rgba(0,0,0,0.4);
+    }
+
+    .titulo {
+        text-align: center;
+        font-size: 50px;
+        font-weight: bold;
+        margin-bottom: 30px;
+        color: white;
+    }
+
+    input[type=text] {
+        color: black;
+    }
+
+    .boton {
+        color: black;
+        width: 100px;
+        height: 35px;
+    }
+</style>
+
+<div class="contenedor">
+
+    <form method="post">
+
+        <div class="row">
+
+            <div class="col-lg-6">
+
+                <div class="caja">
+
+                    <h2>Entradas</h2>
+
+                    <label>Nombre</label>
+                    <br />
+
+                    <input type="text" name="Nombre" value="" />
+                    <br />
+                    <br />
+
+                    <label>Cantidad Compradores</label>
+                    <br />
+
+                    <input type="text" name="Compradores" value="" />
+                    <br />
+                    <br />
+
+                    <label>Tarjeta Cineco</label>
+                    <br />
+
+                    <input type="radio" name="Tarjeta" value="si" /> Si
+
+                    <input type="radio" name="Tarjeta" value="no" /> No
+
+                    <br />
+                    <br />
+
+                    <label>Cantidad Boletos</label>
+                    <br />
+
+                    <input type="text" name="Boletos" value="" />
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-6">
+
+                <div class="caja">
+
+                    <h2>Salidas</h2>
+
+                    <br />
+
+                    <h3>Valor a pagar</h3>
+
+                    <input type="text"
+                           value="@Html.DisplayFor(model => model.Total)"
+                           readonly />
+
+                    <br />
+                    <br />
+
+                    <h3>
+                        @Html.DisplayFor(model => model.Mensaje)
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="acciones">
+
+            <h2>Acciones</h2>
+
+            <br />
+
+            <input class="boton" type="submit" value="Procesar" />
+
+        </div>
+
+    </form>
+
+</div>
